@@ -1,0 +1,38 @@
+---
+title: "R Markdown and Leaflet"
+author: "William T Ellis"
+date: "9/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Set working directory
+
+```{r}
+setwd("~/Desktop/Data Science Courses/R Markdown and Leaflet ")
+getwd()
+```
+
+## Install and load Leaflet
+
+```{r}
+## install.packages("leaflet")
+library("leaflet")
+```
+
+## Create the map.
+
+```{r}
+MyMap <- NULL
+MyMap <- leaflet() %>%
+        addTiles() %>%
+        addPopups(MyMap, lng = -75, lat = 40)
+MyMap
+Sys.Date()
+```
+
+
+        
